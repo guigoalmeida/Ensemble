@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+
+<title> Ensemble </title>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="https://rawgithub.com/krzysztofbialek/Rails-
+Girls-Warsaw-App/master/style.css" />
+
+<body background="http://paradiseintheworld.com/wp-content/uploads/2012/01/dogon-country-mali.jpg" >
+<table >
+<tr>
+<th>NGO</th>
+<th>Name</th>
+<th>Position</th>
+<th>Address</th>
+<th>Email</th>
+</tr>
+<tr>
+<% for entry in @entries %>
+<td><%= entry.NGO %></td>
+<td><%= entry.Name %></td>
+<td><%= entry.Position %></td>
+<td><%= entry.Address %></td>
+<td><%= entry.Email %></td>
+</tr>
+</table>
+<% end %>
+
+<%=link_to("New entry", new_entry_path)%>

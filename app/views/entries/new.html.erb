@@ -1,0 +1,20 @@
+<%= form_for(Entry.new) do |form| %>
+<p><%= form.label("NGO") %></p>
+<p><%= form.text_field("NGO") %></p>
+<p><%= form.label("Name") %></p>
+<p><%= form.text_area("Name") %></p>
+
+<p><%= form.label("Position") %></p>
+<p><%= form.text_area("Position") %></p>
+
+<p><%= form.label("Address") %></p>
+<p><%= form.text_area("Address") %></p>
+
+<p><%= form.label("Email") %></p>
+<p><%= form.text_area("Email") %></p>
+
+
+
+<p><%= form.submit %></p>
+<% end %>
+<p><%= link_to("Back to all entries", entries_path) %></p>
