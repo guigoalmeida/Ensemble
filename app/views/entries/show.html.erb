@@ -1,19 +1,51 @@
 <!doctype html>
 <html>
 
-<title> Ensemble </title>
-<meta charset="UTF-8" />
-<link rel="stylesheet" href="https://rawgithub.com/krzysztofbialek/Rails-
-Girls-Warsaw-App/master/style.css" />
+<head>
+	<title> Ensemble </title>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="https://rawgithub.com/krzysztofbialek/Rails-Girls-Warsaw-App/master/style.css" />
+	<body background="http://famouswonders.com/wp-content/uploads/2010/02/Gao.jpg" >
+<style>
+h1 {text-align:center; color:grey;}
+h2 {text-align:center; color:grey;}
+p {text-align:center;color:grey}
+h3 {text-align:center; color:grey;}
+th {color:grey;}
+td {color:grey;}
+</style>
+</head>
 
-<body background="http://paradiseintheworld.com/wp-content/uploads/2012/01/dogon-country-mali.jpg" >
+<body>
+<div style="width:90%">
 
+<h1> Ensemble</h1>
 
+<h2> This is the current entry</h2>
 
-
-<h3><%=@entry.NGO %></h3>
+<h3>NGO</h3>
+<p><%=@entry.NGO %></p>
+<h3>Name</h3>
 <p><%= @entry.Name %></p>
+<h3>Position</h3>
 <p><%= @entry.Position %></p>
+<h3>Address</h3>
 <p><%= @entry.Address %></p>
+<h3>email</h3>
 <p><%= @entry.Email %></p>
 
+
+<p></p>
+<p> What do you want to do?</p>
+
+<table border ="2" align="center">
+	<tr>
+		<td><%= link_to("Edit this entry", edit_entry_path(@entry)) %></td>
+		<td><%= link_to("Back to the main page", root_path) %></td>           
+		<td><%= link_to("Back to all entries", entries_path) %></td>
+	</tr>
+</table>
+
+</div>
+</body>
+</html>

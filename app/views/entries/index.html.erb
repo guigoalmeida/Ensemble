@@ -1,13 +1,31 @@
 <!doctype html>
+
 <html>
-
-<title> Ensemble </title>
+  <head>
+    <title>Ensemble</title>
+    <!-- Include meta tag to ensure proper rendering and touch zooming -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Include bootstrap stylesheets -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <meta charset="UTF-8" />
-<link rel="stylesheet" href="https://rawgithub.com/krzysztofbialek/Rails-
-Girls-Warsaw-App/master/style.css" />
+<body background="http://famouswonders.com/wp-content/uploads/2010/02/Gao.jpg" >
+  <style>
+h1 {text-align:center; color:grey;}
+h2 {text-align:center; color:grey;}
+p {text-align:center;color:grey}
+th {color:grey;}
+td {color:grey;}
+</style>
+  </head>
 
-<body background="http://paradiseintheworld.com/wp-content/uploads/2012/01/dogon-country-mali.jpg" >
-<table >
+
+
+
+<h1> Ensemble <h1>
+	<h2>Check who is in! Connect yourself! </h2>
+	
+    <div class="container">
+ <table class="table table-striped table-bordered">  
 <tr>
 <th>NGO</th>
 <th>Name</th>
@@ -15,15 +33,31 @@ Girls-Warsaw-App/master/style.css" />
 <th>Address</th>
 <th>Email</th>
 </tr>
-<tr>
 <% for entry in @entries %>
-<td><%= entry.NGO %></td>
+<tr>
+<td><%= link_to(entry.NGO, entry_path(entry))%></td>
 <td><%= entry.Name %></td>
 <td><%= entry.Position %></td>
 <td><%= entry.Address %></td>
 <td><%= entry.Email %></td>
 </tr>
-</table>
 <% end %>
+</table>
 
-<%=link_to("New entry", new_entry_path)%>
+</div>
+
+
+
+
+<table border ="2" align="center">
+  <tr>
+    <td><%=link_to("New entry", new_entry_path)%></td>
+    <td><%=link_to("back to the main page", root_path)%></td>
+    </tr>
+</table>
+
+<p> In order to edit the information concerning an NGO, click on its name. </p> 
+</body>
+</html>
+
+

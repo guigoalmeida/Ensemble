@@ -1,20 +1,46 @@
+<!DOCTYPE html>
+<html>
+<html>
+
+<head>
+	<title> Ensemble </title>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="https://rawgithub.com/krzysztofbialek/Rails-Girls-Warsaw-App/master/style.css" />
+	<body background="http://famouswonders.com/wp-content/uploads/2010/02/Gao.jpg" >
+<style>
+h1 {text-align:center; color:grey;}
+h2 {text-align:center; color:grey;}
+p {text-align:center;color:grey}
+h3 {text-align:center; color:grey;}
+th {color:grey;}
+td {color:grey;}
+</style>
+</head>
+
+<h1> Ensemble</h1> 
+
+<h2>Please insert your NGO's information!</h2>
 <%= form_for(Entry.new) do |form| %>
 <p><%= form.label("NGO") %></p>
-<p><%= form.text_field("NGO") %></p>
+<%= form.text_field("NGO") %>
 <p><%= form.label("Name") %></p>
-<p><%= form.text_area("Name") %></p>
-
+<%= form.text_field("Name") %>
 <p><%= form.label("Position") %></p>
-<p><%= form.text_area("Position") %></p>
-
+<%= form.text_field("Position") %>
 <p><%= form.label("Address") %></p>
-<p><%= form.text_area("Address") %></p>
-
+<%= form.text_field("Address") %>
 <p><%= form.label("Email") %></p>
-<p><%= form.text_area("Email") %></p>
-
-
-
-<p><%= form.submit %></p>
+<%= form.text_field("Email") %>
+<%= form.submit %>
 <% end %>
-<p><%= link_to("Back to all entries", entries_path) %></p>
+
+<table border ="2" align="center">
+	<tr>
+		<td><%= link_to("Back to the main page", root_path) %></td>           
+		<td><%= link_to("Back to all entries", entries_path) %></td>
+	</tr>
+</table>
+
+
+</body>
+</html>
